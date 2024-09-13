@@ -11,8 +11,10 @@ namespace PracticeProject.Infra.Tables
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-
         [Precision(18, 2)]
         public Decimal ProductPrice { get; set; }
+        public int Quantity {  get; set; }
+        public DateTime CreatedDateTime { get; set; }
+
     }
 }

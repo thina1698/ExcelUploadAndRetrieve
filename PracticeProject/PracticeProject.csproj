@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <ProjectReference Include="..\PracticeProject.ApiResponse\PracticeProject.ApiResponse.csproj" />
 	  <ProjectReference Include="..\PracticeProject.Core\PracticeProject.Core.csproj" />
 	  <ProjectReference Include="..\PracticeProject.Infra\PracticeProject.Infra.csproj" />
   </ItemGroup>

@@ -12,7 +12,6 @@ namespace PracticeProject.Core.Implementation
     public class ProductGetEpPlus : IProductGetEpPlus
     {
         private readonly PracticeDbContext _practiceDbContext;
-
         public ProductGetEpPlus(PracticeDbContext practiceDbContext)
         {
             _practiceDbContext = practiceDbContext;
@@ -22,13 +21,9 @@ namespace PracticeProject.Core.Implementation
             {
                 var products = _practiceDbContext.Product.ToList();
 
-                if (products == null || products.Count == 0)
-                {
-                    return Array.Empty<byte>();
-                }
-
                 using (var stream = new MemoryStream())
                 {
+                //To avoid the Exception OpenXmlException We set the License to Non Commercial;;;          
                     ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
                     using (var package = new ExcelPackage(stream))
@@ -45,13 +40,10 @@ namespace PracticeProject.Core.Implementation
                             worksheet.Cells[i + 2, 2].Value = products[i].ProductName;   
                             worksheet.Cells[i + 2, 3].Value = products[i].ProductPrice;  
                         }
-
-                        
                         worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
 
                         package.Save();
                     }
-
                     return stream.ToArray();
                 }
             }

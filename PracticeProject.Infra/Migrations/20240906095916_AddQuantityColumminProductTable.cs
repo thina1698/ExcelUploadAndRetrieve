@@ -5,25 +5,25 @@
 namespace PracticeProject.Infra.Migrations
 {
     /// <inheritdoc />
-    public partial class addMappingTable : Migration
+    public partial class AddQuantityColumminProductTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            //migrationBuilder.DropColumn(
-            //    name: "CustomersId",
-            //    table: "Mapping");
+            migrationBuilder.AddColumn<int>(
+                name: "Quantity",
+                table: "Product",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "CustomersId",
-                table: "Mapping",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
+            migrationBuilder.DropColumn(
+                name: "Quantity",
+                table: "Product");
         }
     }
 }

@@ -13,5 +13,6 @@ namespace PracticeProject.Model.RequestModels
         public string MobileNumber { get; set; }
         public int Age { get; set; }
         public string Address { get; set; }
+        public DateTime CreatedDateTime { get; set; }
     }
 }

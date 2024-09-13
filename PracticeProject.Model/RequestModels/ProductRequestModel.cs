@@ -11,5 +11,7 @@ namespace PracticeProject.Model.RequestModels
         public int ProductId {  get; set; }
         public string ProductName { get; set; }
         public Decimal ProductPrice { get; set; }
+        public int Quantity {  get; set; }
+        public DateTime CreatedDateTime { get; set; }
     }
 }

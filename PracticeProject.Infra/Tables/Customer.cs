@@ -13,5 +13,6 @@ namespace PracticeProject.Infra.Tables
         public string MobileNumber { get; set; }
         public int Age { get; set; }
         public string Address { get; set; }
+        public DateTime CreatedDateTime { get; set; }
     }
 }

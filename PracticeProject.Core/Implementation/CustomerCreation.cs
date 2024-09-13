@@ -28,6 +28,7 @@ namespace PracticeProject.Core.Implementation
                 MobileNumber = requestModel.MobileNumber,
                 Age = requestModel.Age,
                 Address = requestModel.Address,
+                CreatedDateTime =DateTime.Now
             };
             _practiceDbcontext.Customer.Add(customer);
             _practiceDbcontext.SaveChanges();

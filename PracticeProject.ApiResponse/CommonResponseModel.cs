@@ -9,7 +9,7 @@ namespace PracticeProject.ApiResponse
 {
     public class CommonResponseModel
     {
-        public HttpStatusCode httpStatusCode { get; set; }
+        public HttpStatusCode HttpStatusCode { get; set; }
         public dynamic? Data { get; set; }
         public string Message { get; set; }
     }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PracticeProject.Infra;
 
@@ -11,9 +12,11 @@ using PracticeProject.Infra;
 namespace PracticeProject.Infra.Migrations
 {
     [DbContext(typeof(PracticeDbContext))]
-    partial class PracticeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240912112817_AddRatingTable")]
+    partial class AddRatingTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

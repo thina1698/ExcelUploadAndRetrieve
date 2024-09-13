@@ -17,6 +17,9 @@ namespace PracticeProject.Infra
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<Mapping> Mapping { get; set; }
+        public DbSet<Order> Order { get; set; } 
+        public DbSet<Rating> Rating { get; set; }
+
 
     }
 }
